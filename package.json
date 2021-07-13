@@ -1,0 +1,49 @@
+{
+  "name": "nodejs-project-template",
+  "version": "1.0.0",
+  "description": "Seed repo for Node.js projects",
+  "main": "dist/index.js",
+  "author": "Adam Yeats <ay@xadamy.xyz>",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -p tsconfig.json -w --preserveWatchOutput",
+    "dev": "concurrently \"npm:start:debug\" \"npm:build:watch\"",
+    "prepare": "husky install",
+    "start": "node dist/index.js",
+    "start:debug": "NODE_ENV=development DEBUG=nodejs-project-template:* nodemon dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.4",
+    "concurrently": "^6.2.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-security": "^1.4.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
+    "lint-staged": "^11.0.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": "prettier --write"
+  },
+  "volta": {
+    "node": "14.17.3",
+    "npm": "7.19.1"
+  }
+}
