@@ -1,4 +1,6 @@
-node_modules
-dist
+**/*.cjs
+**/*.js
+**/*.mjs
 coverage
-!.eslintrc.js
+dist
+node_modules

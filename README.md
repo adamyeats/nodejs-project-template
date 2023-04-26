@@ -1,10 +1,8 @@
 # Node.js Project Template
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 Hey there! 👋 This is my project template for Node.js projects. It is designed to provide a usable project skeleton with all of my linter rules, tooling, preferences etc. already in place, so I can spend more time building stuff, and less time setting it all up. It is provided in a **fully documented** state, with plenty of code comments, so that people who are unfamiliar with Node.js can see exactly what everything does.
-
-This codebase is offered as a _living standard_. It is designed for debate and discussion. If you think something could be better, or you think it needs something extra, then feel free to make the change! Submit a pull request by following our [Contribution guide](CONTRIBUTING.md) so I can discuss and vote on your change together.
 
 ## Quick Start
 
@@ -16,7 +14,7 @@ This codebase is offered as a _living standard_. It is designed for debate and d
 
 ## Development
 
-This project requires **at least Node.js v14**. Always use the [latest LTS version](https://nodejs.org/en/about/releases/) of Node.js when you can!
+This project requires **at least Node.js v18**. Always use the [latest LTS version](https://nodejs.org/en/about/releases/) of Node.js when you can!
 
 Version management configuration for Node.js is provided for [`volta`](https://volta.sh/). I recommend you have this installed to automatically switch betIen Node.js versions when you enter one of our project directories. This allows for more deterministic and reproducible builds, which makes debugging easier.
 

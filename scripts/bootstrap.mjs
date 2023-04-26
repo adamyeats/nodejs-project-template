@@ -3,6 +3,4 @@
  * should be called here!
  */
 
-// misdetected as a module
-// eslint-disable-next-line
 'use strict';
