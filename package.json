@@ -27,7 +27,7 @@
     "@typescript-eslint/parser": "^6.1.0",
     "concurrently": "^8.2.0",
     "esbuild": "^0.18.16",
-    "eslint": "^8.45.0",
+    "eslint": "^8.47.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-security": "^1.7.1",
     "husky": "^8.0.3",
