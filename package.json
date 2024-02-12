@@ -18,7 +18,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.4.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
