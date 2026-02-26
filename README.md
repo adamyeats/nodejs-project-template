@@ -2,74 +2,42 @@
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-Hey there! 👋 This is my project template for Node.js projects. It is designed to provide a usable project skeleton with all of my linter rules, tooling, preferences etc. already in place, so I can spend more time building stuff, and less time setting it all up. It is provided in a **fully documented** state, with plenty of code comments, so that people who are unfamiliar with Node.js can see exactly what everything does.
+My project template for Node.js projects — a usable skeleton with linting, formatting, testing, and build tooling already configured.
 
 ## Quick Start
 
-- Initialise the project by cloning it into a new directory
-    - You may also want to purge this repositories `git` history before you start, you can do so with `rm -rf .git`
-- Copy `.env.example` to `.env` and fill in the required variables
-- Run `npm install` to install the dependencies
-- Run `npm dev` to start the `tsc` compiler and `nodemon` in watch mode
+- Clone the repo into a new directory (optionally run `rm -rf .git` to start fresh)
+- Copy `.env.example` to `.env` and fill in any required variables
+- Run `npm install`
+- Run `npm run dev` to start the app in watch mode
 
 ## Development
 
-This project requires **at least Node.js v18**. Always use the [latest LTS version](https://nodejs.org/en/about/releases/) of Node.js when you can!
-
-Version management configuration for Node.js is provided for [`volta`](https://volta.sh/). I recommend you have this installed to automatically switch betIen Node.js versions when you enter one of our project directories. This allows for more deterministic and reproducible builds, which makes debugging easier.
-
-You use `volta` to configure the project to use the latest LTS version of Node.js by running:
+Requires **Node.js v24**. Use [fnm](https://github.com/Schniz/fnm) to manage Node versions — it will automatically switch to the pinned version when you enter the directory:
 
 ```bash
-volta pin node@lts
+fnm use
 ```
 
-You can run this command again to update the version.
+### Scripts
 
-### Installation
-
-To install the dependencies:
-
-```bash
-npm install
-```
-
-You can then run the following to start the project in _dev mode_.
-
-```bash
-npm run dev
-```
-
-This runs the `build:watch` and `start:debug` commands at the same time.
-
-#### Debugging the server
-
-You can run the following to only start the server in _debug_ mode. This will also watch your files for changes, and reload the server when your files are saved.
-
-```bash
-npm run start:debug
-```
-
-#### TypeScript Compilation
-
-You can also run the following to only start the compiler in _watch_ mode.
-
-```bash
-npm run build:watch
-```
-
-You can also build the library without watching the directory:
-
-```bash
-npm run build
-```
+| Command | Description |
+|---|---|
+| `npm run dev` | Run the app in watch mode with `tsx` |
+| `npm run build` | Compile a production bundle with esbuild |
+| `npm start` | Run the compiled output |
+| `npm test` | Run tests with Vitest |
+| `npm run test:watch` | Run tests in watch mode |
+| `npm run type-check` | Type-check without emitting |
+| `npm run lint` | Lint with ESLint |
+| `npm run format` | Format with Prettier |
 
 ### Testing
 
-The tests for this library use [Jest](https://jestjs.io) as the test runner. Once you've installed the dependencies, you can run the following command in the root of this repository to run the tests:
+Tests use [Vitest](https://vitest.dev). Test files live in `src/__tests__/`.
 
 ```bash
-npm run test
+npm test
 ```
 
 ### Versioning
